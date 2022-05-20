@@ -1,0 +1,13 @@
+<h1>Викторина</h1>
+
+<p>Добрый день, Иван!</p>
+<button type="button" class="btn btn-link">Профиль</button>
+
+<div class="check-category">
+<p>Выберите категориию вопросов:</p>
+{{#each categories}}
+<button type="button" id="{{this.id}}" class="btn btn-primary">{{this.name}}</button>
+{{/each}}
+</div>
+<div class="questions">
+</div>
