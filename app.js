@@ -3,7 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const hbs = require('hbs');
 const path = require('path');
-const { Answers, Auth, Category, Question, User } = require('./db/models');
 const PORT = process.env.DB_PORT ?? 3000;
 const app = express();
 const authRouter = require('./routes/authRouter');
@@ -18,6 +17,8 @@ app.use(express.static(path.join(process.env.PWD, 'public')));
 app.use('/', authRouter);
 
 
+
+app.use('/main', mainRout);
 
 
 app.listen(PORT, () => {
