@@ -4,8 +4,14 @@ const { Answers, Auth, Category, Question, User } = require('../db/models');
 
 
 router.get('/', async (req, res) => {
-  const response = await Category.findAll({ raw: true });
-  res.render('main', { categories: response })
+  try {
+    const response = await Category.findAll({ raw: true });
+    console.log(response);
+    console.log('response');
+    res.render('main', { categories: response })
+  } catch (err) {
+    console.log(err);
+  }
 })
 
 router.post('/', async (req, res) => {

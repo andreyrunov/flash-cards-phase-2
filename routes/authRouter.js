@@ -6,10 +6,6 @@ router.get('/', async (req, res) => {;
   res.render('auth');
 });
 
-router.get('/main', async (req, res) => {;
-  res.render('main');
-});
-
 router.post('/', async (req, res) => {
   const {login, pass} = req.body;
   const user = await Auth.findOne( { where: {login}})
