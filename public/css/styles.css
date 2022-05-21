@@ -1,6 +1,13 @@
 body {
   margin: 30px;
 }
-h1 {
-  color: red;
+h2 {
+  color: rgb(144, 144, 144);
+  margin: 30px 20px;
+  
+}
+
+.question-block {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
